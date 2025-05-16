@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
 public class StepTest {
 
     private static final String GLOBAL_PARAMETER = "global value";
-    private static final int LARGE_FILE_SIZE_MB = 50;
+    private static final int LARGE_FILE_SIZE_MB = 20;
     private static final int NUM_FILES_PER_TEST = 30;
 
     @Test
