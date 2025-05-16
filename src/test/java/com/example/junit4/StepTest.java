@@ -14,8 +14,8 @@ import java.util.stream.IntStream;
 public class StepTest {
 
     private static final String GLOBAL_PARAMETER = "global value";
-    private static final int LARGE_FILE_SIZE_MB = 20;
-    private static final int NUM_FILES_PER_TEST = 90;
+    private static final int LARGE_FILE_SIZE_MB = 3000;
+    private static final int NUM_FILES_PER_TEST = 1;
 
     @Test
     public void annotatedStepTest() throws IOException {
@@ -29,18 +29,15 @@ public class StepTest {
         Allure.step(String.format("Parent lambda step with parameter [%s]", localParameter), (step) -> {
             step.parameter("parameter", localParameter);
             Allure.step(String.format("Nested lambda step with global parameter [%s]", GLOBAL_PARAMETER));
-            generateLargeAttachments();
         });
     }
 
     @Step("Parent annotated step with parameter [{parameter}]")
     public void annotatedStep(final String parameter) throws IOException {
-        nestedAnnotatedStep();
     }
 
     @Step("Nested annotated step with global parameter [{this.GLOBAL_PARAMETER}]")
     public void nestedAnnotatedStep() throws IOException {
-        generateLargeAttachments();
     }
 
     /**
