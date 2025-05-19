@@ -15,7 +15,7 @@ public class StepTest {
 
     private static final String GLOBAL_PARAMETER = "global value";
     private static final int LARGE_FILE_SIZE_MB = 400;
-    private static final int NUM_FILES_PER_TEST = 9; // 9
+    private static final int NUM_FILES_PER_TEST = 11; // 9
 
     @Test
     public void annotatedStepTest() throws IOException {
