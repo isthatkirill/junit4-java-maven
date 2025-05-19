@@ -14,8 +14,8 @@ import java.util.stream.IntStream;
 public class StepTest {
 
     private static final String GLOBAL_PARAMETER = "global value";
-    private static final int LARGE_FILE_SIZE_MB = 500;
-    private static final int NUM_FILES_PER_TEST = 15; // 9
+    private static final int LARGE_FILE_SIZE_MB = 400;
+    private static final int NUM_FILES_PER_TEST = 19; // 9
 
     @Test
     public void annotatedStepTest() throws IOException {
